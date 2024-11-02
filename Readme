@@ -1,0 +1,15 @@
+Change typw of status from QString to enum class
+
+
+FILE: projectjournal.h/.cpp
+WHAT: In filter functions make addition by pointers
+
+FILE: projectjournal.h/.cpp
+WHAT: Realize comparator?? for filters for time
+
+FILE: project.h/.cpp
+WHAT: Add Creation date
+
+FILE: mainwindow.ui
+WHAT: Think about view of journal
+
