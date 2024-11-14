@@ -83,12 +83,12 @@
       <item>
        <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>Статус              </string>
+         <string>Статус   </string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="project_status_le"/>
+       <widget class="QComboBox" name="project_status_cb"/>
       </item>
      </layout>
     </item>

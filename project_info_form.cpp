@@ -7,6 +7,9 @@ ProjectInfoForm::ProjectInfoForm(QWidget *parent)
 {
     ui->setupUi(this);
     qDebug() << "hello";
+    ui->project_status_cb->addItem("Новий");
+    ui->project_status_cb->addItem("В процесі");
+    ui->project_status_cb->addItem("Завершено");
 }
 
 ProjectInfoForm::~ProjectInfoForm()
@@ -25,7 +28,7 @@ void ProjectInfoForm::ClearFields()
     ui->project_name_le->clear();
     ui->project_manager_le->clear();
     ui->time_amount_le->clear();
-    ui->project_status_le->clear();
+    ui->project_status_cb->clear();
 };
 
 bool ProjectInfoForm::IsFieldsEmpty()
@@ -33,7 +36,7 @@ bool ProjectInfoForm::IsFieldsEmpty()
     if(ui->project_name_le->text().isEmpty() ||
     ui->project_manager_le->text().isEmpty() ||
     ui->time_amount_le->text().isEmpty() ||
-    ui->project_status_le->text().isEmpty())
+    ui->project_status_cb->currentText().isEmpty())
     {
         return true;
     }
@@ -53,7 +56,7 @@ void ProjectInfoForm::on_project_edition_initiated(Project project)
     ui->project_name_le->setText(project.GetName());
     ui->project_manager_le->setText(project.GetManager());
     ui->time_amount_le->setText(QString::number(project.GetTime()));
-    ui->project_status_le->setText(project.GetStatus());
+    ui->project_status_cb->setCurrentText(project.GetStatus());
     ui->action_pb->setText("Редагувати");
     mode = InfoMode::EDITION;
     project_id = project.GetId();
@@ -70,7 +73,7 @@ void ProjectInfoForm::on_action_pb_clicked()
     bool ok;
     QString name = ui->project_name_le->text();
     QString manager = ui->project_manager_le->text();
-    QString status = ui->project_status_le->text();
+    QString status = ui->project_status_cb->currentText();
     QDate date = ui->date_de->date();
 
     int time = ui->time_amount_le->text().toInt(&ok);
