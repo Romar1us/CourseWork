@@ -38,9 +38,13 @@ constexpr auto qt_meta_stringdata_CLASSProjectInfoFormENDCLASS = QtMocHelpers::s
     "ProjectInfoForm",
     "project_created",
     "",
-    "Project*",
+    "Project",
     "project",
-    "on_add_project_pb_clicked"
+    "project_edited",
+    "_project_id",
+    "on_project_creation_initiated",
+    "on_project_edition_initiated",
+    "on_action_pb_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -53,23 +57,29 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSProjectInfoFormENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
+       2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   26,    2, 0x06,    1 /* Public */,
+       1,    1,   44,    2, 0x06,    1 /* Public */,
+       5,    2,   47,    2, 0x06,    3 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       5,    0,   29,    2, 0x08,    3 /* Private */,
+       7,    0,   52,    2, 0x0a,    6 /* Public */,
+       8,    1,   53,    2, 0x0a,    7 /* Public */,
+       9,    0,   56,    2, 0x08,    9 /* Private */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
+    QMetaType::Void, 0x80000000 | 3, QMetaType::Int,    4,    6,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 3,    4,
     QMetaType::Void,
 
        0        // eod
@@ -86,8 +96,17 @@ Q_CONSTINIT const QMetaObject ProjectInfoForm::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<ProjectInfoForm, std::true_type>,
         // method 'project_created'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<Project *, std::false_type>,
-        // method 'on_add_project_pb_clicked'
+        QtPrivate::TypeAndForceComplete<Project, std::false_type>,
+        // method 'project_edited'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Project, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'on_project_creation_initiated'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_project_edition_initiated'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Project, std::false_type>,
+        // method 'on_action_pb_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -99,16 +118,26 @@ void ProjectInfoForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         auto *_t = static_cast<ProjectInfoForm *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->project_created((*reinterpret_cast< std::add_pointer_t<Project*>>(_a[1]))); break;
-        case 1: _t->on_add_project_pb_clicked(); break;
+        case 0: _t->project_created((*reinterpret_cast< std::add_pointer_t<Project>>(_a[1]))); break;
+        case 1: _t->project_edited((*reinterpret_cast< std::add_pointer_t<Project>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 2: _t->on_project_creation_initiated(); break;
+        case 3: _t->on_project_edition_initiated((*reinterpret_cast< std::add_pointer_t<Project>>(_a[1]))); break;
+        case 4: _t->on_action_pb_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (ProjectInfoForm::*)(Project * );
+            using _t = void (ProjectInfoForm::*)(Project );
             if (_t _q_method = &ProjectInfoForm::project_created; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
+                return;
+            }
+        }
+        {
+            using _t = void (ProjectInfoForm::*)(Project , int );
+            if (_t _q_method = &ProjectInfoForm::project_edited; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 1;
                 return;
             }
         }
@@ -134,21 +163,28 @@ int ProjectInfoForm::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 5;
     }
     return _id;
 }
 
 // SIGNAL 0
-void ProjectInfoForm::project_created(Project * _t1)
+void ProjectInfoForm::project_created(Project _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
+}
+
+// SIGNAL 1
+void ProjectInfoForm::project_edited(Project _t1, int _t2)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
+    QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 QT_WARNING_POP

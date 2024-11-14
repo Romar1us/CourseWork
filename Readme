@@ -13,3 +13,17 @@ WHAT: Add Creation date
 FILE: mainwindow.ui
 WHAT: Think about view of journal
 
+FILE: project_info_form.h/.cpp
+WHAT: do i need to emit pointer to ptoject? or i can just emit project? what is better?
+
+FILE: mainwindow.h/.cpp
+WHAT: create custom widget for data representation
+
+
+QUESTIONS:
+1) Чи обов'язково виняткові ситуації? Вони повільні, можна без них? Якщо не можна без них, то в яких ситуаціях
+    вони необхідні?
+2) Чи добре реалізовано компаратори? Чи це погано так робити?
+3) Чи можна юзати Json замість простого файлу?
+4) Чи можу я використовувати прості об'єкти, а не поінтери
+

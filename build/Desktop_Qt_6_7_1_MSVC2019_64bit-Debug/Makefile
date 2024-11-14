@@ -428,12 +428,18 @@ Makefile: ..\..\ProjectJournal.pro C:\Qt\6.7.1\msvc2019_64\mkspecs\win32-msvc\qm
 		C:\Qt\6.7.1\msvc2019_64\mkspecs\features\yacc.prf \
 		C:\Qt\6.7.1\msvc2019_64\mkspecs\features\lex.prf \
 		..\..\ProjectJournal.pro \
+		C:\Qt\6.7.1\msvc2019_64\lib\Qt6Charts.prl \
+		C:\Qt\6.7.1\msvc2019_64\lib\Qt6OpenGLWidgets.prl \
 		C:\Qt\6.7.1\msvc2019_64\lib\Qt6Widgets.prl \
+		C:\Qt\6.7.1\msvc2019_64\lib\Qt6OpenGL.prl \
 		C:\Qt\6.7.1\msvc2019_64\lib\Qt6Gui.prl \
 		C:\Qt\6.7.1\msvc2019_64\lib\Qt6Core.prl \
 		C:\Qt\6.7.1\msvc2019_64\lib\Qt6EntryPoint.prl \
 		C:\Qt\6.7.1\msvc2019_64\mkspecs\features\build_pass.prf \
+		C:\Qt\6.7.1\msvc2019_64\lib\Qt6Chartsd.prl \
+		C:\Qt\6.7.1\msvc2019_64\lib\Qt6OpenGLWidgetsd.prl \
 		C:\Qt\6.7.1\msvc2019_64\lib\Qt6Widgetsd.prl \
+		C:\Qt\6.7.1\msvc2019_64\lib\Qt6OpenGLd.prl \
 		C:\Qt\6.7.1\msvc2019_64\lib\Qt6Guid.prl \
 		C:\Qt\6.7.1\msvc2019_64\lib\Qt6Cored.prl \
 		C:\Qt\6.7.1\msvc2019_64\lib\Qt6EntryPointd.prl
@@ -782,12 +788,18 @@ C:\Qt\6.7.1\msvc2019_64\mkspecs\features\exceptions.prf:
 C:\Qt\6.7.1\msvc2019_64\mkspecs\features\yacc.prf:
 C:\Qt\6.7.1\msvc2019_64\mkspecs\features\lex.prf:
 ..\..\ProjectJournal.pro:
+C:\Qt\6.7.1\msvc2019_64\lib\Qt6Charts.prl:
+C:\Qt\6.7.1\msvc2019_64\lib\Qt6OpenGLWidgets.prl:
 C:\Qt\6.7.1\msvc2019_64\lib\Qt6Widgets.prl:
+C:\Qt\6.7.1\msvc2019_64\lib\Qt6OpenGL.prl:
 C:\Qt\6.7.1\msvc2019_64\lib\Qt6Gui.prl:
 C:\Qt\6.7.1\msvc2019_64\lib\Qt6Core.prl:
 C:\Qt\6.7.1\msvc2019_64\lib\Qt6EntryPoint.prl:
 C:\Qt\6.7.1\msvc2019_64\mkspecs\features\build_pass.prf:
+C:\Qt\6.7.1\msvc2019_64\lib\Qt6Chartsd.prl:
+C:\Qt\6.7.1\msvc2019_64\lib\Qt6OpenGLWidgetsd.prl:
 C:\Qt\6.7.1\msvc2019_64\lib\Qt6Widgetsd.prl:
+C:\Qt\6.7.1\msvc2019_64\lib\Qt6OpenGLd.prl:
 C:\Qt\6.7.1\msvc2019_64\lib\Qt6Guid.prl:
 C:\Qt\6.7.1\msvc2019_64\lib\Qt6Cored.prl:
 C:\Qt\6.7.1\msvc2019_64\lib\Qt6EntryPointd.prl:

@@ -7,47 +7,138 @@
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>800</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="delete_project_pb">
-    <property name="geometry">
-     <rect>
-      <x>870</x>
-      <y>680</y>
-      <width>111</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Delete project</string>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="listWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>961</width>
-      <height>581</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="add_project_pb">
+   <widget class="QListWidget" name="projects_list_widget">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>690</y>
-      <width>83</width>
+      <y>10</y>
+      <width>981</width>
+      <height>361</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>440</y>
+      <width>160</width>
+      <height>103</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="add_project_pb">
+       <property name="text">
+        <string>Додати</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="alter_project_pb">
+       <property name="text">
+        <string>Змінити</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="delete_project_pb">
+       <property name="text">
+        <string>Видалити</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>440</y>
+      <width>160</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="filter_projects_pb">
+       <property name="text">
+        <string>Фільтрувати</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="clear_filters_pb">
+       <property name="text">
+        <string>Скинути фільтри</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLineEdit" name="project_amount_view_le">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>981</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>440</y>
+      <width>164</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QPushButton" name="sort_projects_pb">
+       <property name="text">
+        <string>Сортувати</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancel_sort_pb">
+       <property name="text">
+        <string>Скасувати сортування</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="graph_pb">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>440</y>
+      <width>158</width>
       <height>29</height>
      </rect>
     </property>
     <property name="text">
-     <string>Додати</string>
+     <string>Графік</string>
     </property>
    </widget>
   </widget>
@@ -60,8 +151,27 @@
      <height>25</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="read_from_file_action"/>
+    <addaction name="separator"/>
+    <addaction name="write_to_file_action"/>
+   </widget>
+   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="read_from_file_action">
+   <property name="text">
+    <string>Зчитати з файлу</string>
+   </property>
+  </action>
+  <action name="write_to_file_action">
+   <property name="text">
+    <string>Записати у файл</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
